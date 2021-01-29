@@ -23,13 +23,13 @@ this test. Please try this without using any
 frameworks or libraries. Your code will be
 tested in Chrome.
 
-First Header | Second Header
+Colours used in this design: | Second Header
 ------------ | -------------
-Content from cell 1 | Content from cell 2
+#000000 | Content from cell 2
 Content in the first column | Content in the second column
 
-Colours used in this design:
-#000000 #2B8EAD
+
+ #2B8EAD
 #333333 #6F98A8
 #FFFFFF #BFBFBF
 #EFEFEF #2F454E
