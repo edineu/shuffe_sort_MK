@@ -1,7 +1,7 @@
 # Shuffe and Sort App : shuffe_sort_MK
 JS app showing how shuffling and Sorting works - with responsive UI
 
-UI Engineer Coding Exercise
+UI Exercise
 
 To complete this test, we are expecting
 you to accurately make this responsive
@@ -23,8 +23,16 @@ frameworks or libraries. Your code will be
 tested in Chrome.
 
 Colours used in this design:
-#000000 #2B8EAD
-#333333 #6F98A8
-#FFFFFF #BFBFBF
-#EFEFEF #2F454E
+
+------------ | -------------
+#000000 | #2B8EAD
+#333333 | #6F98A8
+#FFFFFF | #BFBFBF
+#EFEFEF | #2F454E
+
+
+ 
+ 
+ 
+ 
 #72C3DC
