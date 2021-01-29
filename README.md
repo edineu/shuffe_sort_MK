@@ -21,7 +21,7 @@ No frameworks or libraries.
 
 Tested in Chrome.
 
-Colours used in this design: |
+Colours used in this design: | Bgr color for each item
 ------------ | -------------
 #000000 | #2B8EAD
 #333333 | #6F98A8
