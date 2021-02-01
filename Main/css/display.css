@@ -1,0 +1,233 @@
+* {
+  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-weight: 300;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background: #ffffff;
+  margin: 100px 0 0 0;
+}
+
+p {
+  margin-top: 5px;
+  margin-bottom: 50px;
+}
+
+.grid-item,
+header,
+main,
+aside,
+footer {
+  background: #efefef;
+  color: white;
+  /*border: 1px solid #377eff;*/
+}
+
+.grid-item,
+header {
+  background: #ffffff;
+  color: #000000;
+  text-align: center;
+  font-weight: 600;
+  padding-bottom: 10px;
+  border-bottom: 4px solid #bfbfbf;
+}
+
+.grid-item,
+aside {
+  background: #efefef;
+  color: #000000;
+  text-align: center;
+}
+
+/* Footer stylig  */
+.grid-item,
+footer {
+  background: #efefef;
+  color: #000000;
+  text-align: center;
+  font-weight: 600;
+}
+
+.grid-item,
+footer p i {
+  margin-top: 5px;
+  padding: 0;
+  font-size: 10px;
+}
+
+a {
+  color: white;
+}
+
+a:active,
+:focus {
+  outline: 2px solid white;
+  background: purple;
+}
+
+/* Add button style from here */
+
+/* Add card numbering styles here */
+.card1,
+.card2,
+.card3,
+.card4,
+.card5,
+.card6,
+.card7,
+.card8,
+.card9 {
+  color: white;
+  font-size: 7em;
+  padding: 37px;
+}
+
+.cards {
+  margin: 0 auto;
+  display: grid;
+  text-align: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.card1 {
+  background-color: #6f98a8;
+}
+
+.card2 {
+  background-color: #2b8ead;
+}
+
+.card3 {
+  background-color: #2f454e;
+}
+
+.card4 {
+  background-color: #2b8ead;
+}
+
+.card5 {
+  background-color: #2f454e;
+}
+
+.card6 {
+  background-color: #bfbfbf;
+}
+
+.card7 {
+  background-color: #bfbfbf;
+}
+
+.card8 {
+  background-color: #6f98a8;
+}
+
+.card9 {
+  background-color: #2f454e;
+}
+
+@media (min-width: 375px) {
+  .cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (min-width: 960px) {
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Buttons style shuffe and sort */
+.btn {
+  display: block;
+  width: 75%;
+  font-size: 0.7rem;
+  letter-spacing: 1px;
+  font-weight: 100;
+
+  color: #ffffff;
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 17px 59px;
+  margin: 21px 30px;
+  text-transform: uppercase;
+  outline: none;
+  position: relative;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.btn:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+/* Button btn-shuf */
+.perspective {
+  -webkit-perspective: 800px;
+  -moz-perspective: 800px;
+  perspective: 800px;
+  display: inline-block;
+}
+
+.btn-shuf {
+  display: block;
+  border-radius: 8px;
+  background: #72c3dc;
+  outline: 1px solid transparent; /* FF jagged edges fix */
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.btn-shuf:active {
+  background: #72c3dc;
+}
+
+/* Button af */
+.btn-af {
+  -webkit-transform: rotateX(15deg);
+  -moz-transform: rotateX(15deg);
+  -ms-transform: rotateX(15deg);
+  transform: rotateX(15deg);
+}
+
+.btn-af:after {
+  width: 96%;
+  height: 100%;
+  left: 0;
+  top: 84%;
+
+  background: #2b8ead;
+  -webkit-transform-origin: 0% 0%;
+  -webkit-transform: rotateX(-90deg);
+  -moz-transform-origin: 0% 0%;
+  -moz-transform: rotateX(-90deg);
+  -ms-transform-origin: 0% 0%;
+  -ms-transform: rotateX(-90deg);
+  transform-origin: 0% 0%;
+  transform: rotateX(-90deg);
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 24px;
+  border-bottom-right-radius: 24px;
+  border-top-left-radius: 0px;
+  text-align: center;
+  margin-left: 3px;
+}
+
+.btn-af:active {
+  -webkit-transform: rotateX(0deg);
+  -moz-transform: rotateX(0deg);
+  -ms-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+}
