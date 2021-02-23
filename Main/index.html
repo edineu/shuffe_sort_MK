@@ -3,40 +3,30 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Up and Running - CSS Grid</title>
-    <link rel="stylesheet" href="css/display.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI Engineer Coding Assigment</title>
     <link rel="stylesheet" href="css/css-grid.css">
+    <link rel="stylesheet" href="css/display.css">
 </head>
 
 <body>
-    <header>Shuffe and Sort</header>
-    <main>
-        <section>
-            <div class="cards">
-                <div class="card1">1</div>
-                <div class="card2">2</div>
-                <div class="card3">3</div>
-                <div class="card4">4</div>
-                <div class="card5">5</div>
-                <div class="card6">6</div>
-                <div class="card7">7</div>
-                <div class="card8">8</div>
-                <div class="card9">9</div>
-            </div>
-        </section>
-    </main>
-    <aside>
-        <div class="btn-cotainer">
-            <button class="btn btn-shuf btn-af">Shufffe</button>
-            <button class="btn btn-shuf btn-af">Sort</button>
+    <header class="grid-item header">Shuffe and Sort</header>
+    <main class="grid-item main">
+        <div id="grid-container">
+            <div id="cell-container"></div>
         </div>
-
-
+    </main>
+    <aside class="grid-item aside">
+        <button class="btn btn-shuf btn-af" onclick="shuffleArray()">Shuffe</button>
+        <button class="btn btn-sort btn-af" onclick="sortArray()">Sort</button>
     </aside>
-    <footer>
-        <p><i>Shuffe and sort by Edineu Hansen</i></p>
+    <footer class="grid-item footer">
+        <p><i>Shuffe and sort by {{Edineu Hansen}}</i></p>
+
+
     </footer>
+
+    <script type="" src="./JS/jsTest"></script>
 </body>
 
 </html>

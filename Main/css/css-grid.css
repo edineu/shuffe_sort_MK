@@ -1,19 +1,219 @@
-html,
-body {
-  max-width: 960px;
-  margin: 20px auto;
-  height: auto;
-}
-
 body {
   display: grid;
-  grid-template-columns: auto 16em;
-  grid-template-rows: min-content auto;
-  /*grid-template-rows: auto min-content;*/
+  grid:
+    "header" 3em
+    "aside " 5em
+    "main  " 24em
+    "footer" 5em /
+    1fr;
 }
 
-header,
+.header {
+  background: #333333;
+  text-align: center;
+  font-size: 6vw;
+  padding: 12px;
+}
+
+.aside {
+  display: flex;
+  background-color: #ffffff;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+/* Button layout */
+.btn {
+  display: block;
+  width: 29%;
+  height: 65%;
+  font-weight: 100;
+  color: #ffffff;
+  border: none;
+  background: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  outline: none;
+  position: relative;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.btn-shuf {
+  margin: 0px 5px 0px;
+}
+
+.btn-sort {
+  margin: 0px 0px 0px;
+}
+
+.btn:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+/* btn-shuf */
+.perspective {
+  -webkit-perspective: 800px;
+  -moz-perspective: 800px;
+  perspective: 800px;
+  display: inline-block;
+}
+
+.btn-sort,
+.btn-shuf {
+  border-radius: 8px;
+  background: #72c3dc;
+  outline: 1px solid transparent; /* FF jagged edges fix */
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.btn-shuf:active {
+  background: #72c3dc;
+}
+
+/* btn af */
+.btn-af {
+  -webkit-transform: rotateX(15deg);
+  -moz-transform: rotateX(15deg);
+  -ms-transform: rotateX(15deg);
+  transform: rotateX(15deg);
+}
+
+.btn-af:after {
+  width: 96%;
+  height: 100%;
+  left: 0;
+  top: 84%;
+
+  background: #2b8ead;
+  -webkit-transform-origin: 0% 0%;
+  -webkit-transform: rotateX(-90deg);
+  -moz-transform-origin: 0% 0%;
+  -moz-transform: rotateX(-90deg);
+  -ms-transform-origin: 0% 0%;
+  -ms-transform: rotateX(-90deg);
+  transform-origin: 0% 0%;
+  transform: rotateX(-90deg);
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 24px;
+  border-bottom-right-radius: 24px;
+  border-top-left-radius: 0px;
+  text-align: center;
+  margin-left: 3px;
+}
+
+.btn-af:active {
+  -webkit-transform: rotateX(0deg);
+  -moz-transform: rotateX(0deg);
+  -ms-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+}
+
+/* Style lay for the Mobile 375px screen size */
+@media screen and (max-width: 375px) {
+  body {
+    display: grid;
+    grid:
+      "header" 3em
+      "asidie" 5em
+      "footer footer" 5em /
+      1fr 2fr;
+    border: 8px solid #000000;
+    border-radius: 1%;
+
+    grid-template-columns: repeat(1, auto);
+  }
+
+  .header {
+    background: #333333;
+    text-align: center;
+    font-size: 6vw;
+    padding: 12px;
+  }
+
+  /* Number container  attribute */
+  #cell-container {
+    color: #000000;
+    margin: auto;
+    padding: 9px;
+    text-align: center;
+    font-size: 6vw;
+
+    justify-content: center;
+    align-items: center;
+  }
+
+  [grid-item-data] {
+    height: 37px;
+    margin-bottom: 5px;
+    line-height: 40px;
+  }
+
+  [grid-item-data="1"],
+  [grid-item-data="8"] {
+    background-color: #efefef;
+    border-left: 7px solid #6f98a8;
+  }
+
+  [grid-item-data="2"],
+  [grid-item-data="4"] {
+    background-color: #efefef;
+    border-left: 7px solid #2b8ead;
+  }
+
+  [grid-item-data="3"],
+  [grid-item-data="5"],
+  [grid-item-data="9"] {
+    background-color: #efefef;
+    border-left: 7px solid #333333;
+  }
+
+  [grid-item-data="6"],
+  [grid-item-data="7"] {
+    background-color: #efefef;
+    border-left: 7px solid #bfbfbf;
+  }
+
+  /* Footer container */
+  .footer {
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 4vw;
+    font-style: italic;
+  }
+
+  .footer p {
+    color: #000000;
+    text-align: center;
+    font-size: 3.4vw;
+  }
+
+  [grid-item-data-1] {
+    background-color: #2b8ead;
+  }
+} /* END 375px responsive */
+
+@media screen and (min-width: 800px) {
+}
+
+header {
+  grid-area: header;
+}
+aside {
+  grid-area: aside;
+}
+main {
+  grid-area: main;
+}
 footer {
-  grid-column-start: 1;
-  grid-column-end: 3;
+  grid-area: footer;
 }
